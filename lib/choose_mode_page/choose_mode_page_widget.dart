@@ -249,7 +249,7 @@ class _ChooseModePageWidgetState extends State<ChooseModePageWidget>
                                 ).animateOnPageLoad(animationsMap[
                                     'columnOnPageLoadAnimation1']!),
                                 Container(
-                                  width: 60,
+                                  width: 40,
                                   decoration: BoxDecoration(
                                     color: Colors.transparent,
                                   ),
@@ -315,9 +315,9 @@ class _ChooseModePageWidgetState extends State<ChooseModePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: RegisterOrSignInPageWidget(),
                                 ),
                               );
