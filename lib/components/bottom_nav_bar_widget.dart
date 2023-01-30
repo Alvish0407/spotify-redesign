@@ -150,8 +150,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
                     FFAppState().currentIndex = 1;
                   });
                 },
-                child: Image.network(
-                  valueOrDefault<String>(
+                child: CachedNetworkImage(
+                  imageUrl: valueOrDefault<String>(
                     FFAppState().currentIndex == 1
                         ? 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/uza6c3dmny5u/a_heart.svg'
                         : 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/tpp6coqll41m/heart.svg',
@@ -193,8 +193,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
                     FFAppState().currentIndex = 2;
                   });
                 },
-                child: Image.network(
-                  valueOrDefault<String>(
+                child: CachedNetworkImage(
+                  imageUrl: valueOrDefault<String>(
                     FFAppState().currentIndex == 2
                         ? 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/7mp533tq3g7o/a_profile.svg'
                         : 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/llzjpchvj8ve/profile.svg',

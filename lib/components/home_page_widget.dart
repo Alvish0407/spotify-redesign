@@ -544,9 +544,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: SongDetailsPageWidget(
                                     imageURL:
                                         'https://sun9-40.userapi.com/impf/c621705/v621705168/38088/ozNr6edPo9w.jpg?size=604x256&quality=96&sign=65cfe0a5b385ead2615c601a5d977da6&c_uniq_tag=aw-1RY8snYllk9s5KLLu6PU_BAnp581q5AjI5dzImsY&type=album',
@@ -576,9 +576,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: SongDetailsPageWidget(
                                     imageURL:
                                         'https://i.scdn.co/image/ab67616d0000b2739618642c20d509b21b11301f',
@@ -673,9 +673,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: SongDetailsPageWidget(
                                     imageURL:
                                         'https://i.scdn.co/image/ab67616d0000b273e13ab134bdec59e2d0e82290',
@@ -770,9 +770,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: SongDetailsPageWidget(
                                     imageURL:
                                         'https://i.scdn.co/image/ab67616d0000b2734e0362c225863f6ae2432651',
@@ -867,9 +867,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               await Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 0),
-                                  reverseDuration: Duration(milliseconds: 0),
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
                                   child: SongDetailsPageWidget(
                                     imageURL:
                                         'https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14',

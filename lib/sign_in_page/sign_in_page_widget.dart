@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../main_page/main_page_widget.dart';
+import '../register_page/register_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -427,9 +428,9 @@ class _SignInPageWidgetState extends State<SignInPageWidget>
                       await Navigator.push(
                         context,
                         PageTransition(
-                          type: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                          reverseDuration: Duration(milliseconds: 0),
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
                           child: MainPageWidget(),
                         ),
                       );
@@ -570,10 +571,10 @@ class _SignInPageWidgetState extends State<SignInPageWidget>
                           await Navigator.push(
                             context,
                             PageTransition(
-                              type: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                              reverseDuration: Duration(milliseconds: 0),
-                              child: SignInPageWidget(),
+                              type: PageTransitionType.rightToLeft,
+                              duration: Duration(milliseconds: 300),
+                              reverseDuration: Duration(milliseconds: 300),
+                              child: RegisterPageWidget(),
                             ),
                           );
                         },
