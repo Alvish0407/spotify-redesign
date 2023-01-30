@@ -217,10 +217,10 @@ class _RegisterOrSignInPageWidgetState extends State<RegisterOrSignInPageWidget>
                                       await Navigator.push(
                                         context,
                                         PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
+                                          type: PageTransitionType.rightToLeft,
+                                          duration: Duration(milliseconds: 300),
                                           reverseDuration:
-                                              Duration(milliseconds: 0),
+                                              Duration(milliseconds: 300),
                                           child: RegisterPageWidget(),
                                         ),
                                       );
@@ -258,10 +258,10 @@ class _RegisterOrSignInPageWidgetState extends State<RegisterOrSignInPageWidget>
                                       await Navigator.push(
                                         context,
                                         PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
+                                          type: PageTransitionType.rightToLeft,
+                                          duration: Duration(milliseconds: 300),
                                           reverseDuration:
-                                              Duration(milliseconds: 0),
+                                              Duration(milliseconds: 300),
                                           child: SignInPageWidget(),
                                         ),
                                       );

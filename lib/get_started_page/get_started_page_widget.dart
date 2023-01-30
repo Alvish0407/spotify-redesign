@@ -91,122 +91,119 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget>
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Stack(
-              alignment: AlignmentDirectional(0, 0),
-              children: [
-                Align(
-                  alignment: AlignmentDirectional(0, 0),
-                  child: Image.asset(
-                    'assets/images/billie.png',
-                    width: double.infinity,
-                    height: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Stack(
+            alignment: AlignmentDirectional(0, 0),
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0, 0),
+                child: Image.asset(
+                  'assets/images/billie.png',
+                  width: double.infinity,
+                  height: double.infinity,
+                  fit: BoxFit.cover,
                 ),
-                Align(
-                  alignment: AlignmentDirectional(0, 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 37, 0, 0),
-                        child: SvgPicture.asset(
-                          'assets/images/spotify.svg',
-                          width: 196,
-                          height: 59,
-                          fit: BoxFit.scaleDown,
-                        ).animateOnPageLoad(
-                            animationsMap['imageOnPageLoadAnimation']!),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 21),
-                                child: Text(
-                                  'Enjoy Listening To Music',
-                                  style: TextStyle(
-                                    fontFamily: 'Satoshi',
-                                    color: FlutterFlowTheme.of(context).dadada,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 25,
-                                  ),
-                                ).animateOnPageLoad(
-                                    animationsMap['textOnPageLoadAnimation1']!),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    47, 0, 47, 37),
-                                child: Text(
-                                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis enim purus sed phasellus. Cursus ornare id scelerisque aliquam.',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: 'Satoshi',
-                                    color: FlutterFlowTheme.of(context).c797979,
-                                    fontWeight: FontWeight.w300,
-                                    fontSize: 17,
-                                  ),
-                                ).animateOnPageLoad(
-                                    animationsMap['textOnPageLoadAnimation2']!),
-                              ),
-                            ),
-                            FFButtonWidget(
-                              onPressed: () async {
-                                await Navigator.push(
-                                  context,
-                                  PageTransition(
-                                    type: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                    reverseDuration: Duration(milliseconds: 0),
-                                    child: ChooseModePageWidget(),
-                                  ),
-                                );
-                              },
-                              text: 'Get Started',
-                              options: FFButtonOptions(
-                                width: 329,
-                                height: 92,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                textStyle: TextStyle(
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, 0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 37, 0, 0),
+                      child: SvgPicture.asset(
+                        'assets/images/spotify.svg',
+                        width: 196,
+                        height: 59,
+                        fit: BoxFit.scaleDown,
+                      ).animateOnPageLoad(
+                          animationsMap['imageOnPageLoadAnimation']!),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 21),
+                              child: Text(
+                                'Enjoy Listening To Music',
+                                style: TextStyle(
                                   fontFamily: 'Satoshi',
-                                  color: FlutterFlowTheme.of(context).f6f6f6,
+                                  color: FlutterFlowTheme.of(context).dadada,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 22,
+                                  fontSize: 25,
                                 ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                              ).animateOnPageLoad(
+                                  animationsMap['textOnPageLoadAnimation1']!),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(47, 0, 47, 37),
+                              child: Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis enim purus sed phasellus. Cursus ornare id scelerisque aliquam.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Satoshi',
+                                  color: FlutterFlowTheme.of(context).c797979,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 17,
                                 ),
-                                borderRadius: BorderRadius.circular(30),
+                              ).animateOnPageLoad(
+                                  animationsMap['textOnPageLoadAnimation2']!),
+                            ),
+                          ),
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await Navigator.push(
+                                context,
+                                PageTransition(
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 300),
+                                  reverseDuration: Duration(milliseconds: 300),
+                                  child: ChooseModePageWidget(),
+                                ),
+                              );
+                            },
+                            text: 'Get Started',
+                            options: FFButtonOptions(
+                              width: 329,
+                              height: 92,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              textStyle: TextStyle(
+                                fontFamily: 'Satoshi',
+                                color: FlutterFlowTheme.of(context).f6f6f6,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 22,
                               ),
-                              showLoadingIndicator: false,
-                            ).animateOnPageLoad(
-                                animationsMap['buttonOnPageLoadAnimation']!),
-                          ],
-                        ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            showLoadingIndicator: false,
+                          ).animateOnPageLoad(
+                              animationsMap['buttonOnPageLoadAnimation']!),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

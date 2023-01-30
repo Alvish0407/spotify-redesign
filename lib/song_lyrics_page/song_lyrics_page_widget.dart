@@ -29,6 +29,18 @@ class SongLyricsPageWidget extends StatefulWidget {
 class _SongLyricsPageWidgetState extends State<SongLyricsPageWidget>
     with TickerProviderStateMixin {
   final animationsMap = {
+    'rowOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
     'textOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -81,18 +93,6 @@ class _SongLyricsPageWidgetState extends State<SongLyricsPageWidget>
           curve: Curves.easeInOut,
           delay: 500.ms,
           duration: 500.ms,
-          begin: 0,
-          end: 1,
-        ),
-      ],
-    ),
-    'rowOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
           begin: 0,
           end: 1,
         ),
@@ -166,94 +166,95 @@ class _SongLyricsPageWidgetState extends State<SongLyricsPageWidget>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.3),
+                alignment: AlignmentDirectional(0, -1),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(55, 0, 47, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(32, 0, 32, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Text(
-                          'Well, I found a woman, stronger than \n\nanyone I know\n\nShe shares my dreams, I hope that \n\nsomeday I\'ll share her home\n\nI found a lover, to carry more than just \n\nmy secrets\n\nTo carry love, to carry children of our \n\nown\n',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            fontFamily: 'Satoshi',
-                            color: Color(0x80FFFFFF),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                          ),
-                        ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation1']!),
+                        alignment: AlignmentDirectional(0, -1),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 29),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              BackButtonWidget(),
+                              Text(
+                                widget.songName!,
+                                style: TextStyle(
+                                  fontFamily: 'Satoshi',
+                                  color: FlutterFlowTheme.of(context).dddddd,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SvgPicture.asset(
+                                'assets/images/vert.svg',
+                                width: 4,
+                                height: 18,
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ).animateOnPageLoad(
+                              animationsMap['rowOnPageLoadAnimation']!),
+                        ),
                       ),
                       Align(
                         alignment: AlignmentDirectional(0, 0),
-                        child: Text(
-                          'We are still kids, but we\'re so in love. \n',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            fontFamily: 'Satoshi',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20,
-                          ),
-                        ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation2']!),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(23, 0, 15, 0),
+                          child: Text(
+                            'Well, I found a woman, stronger than \n\nanyone I know\n\nShe shares my dreams, I hope that \n\nsomeday I\'ll share her home\n\nI found a lover, to carry more than just \n\nmy secrets\n\nTo carry love, to carry children of our \n\nown\n',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontFamily: 'Satoshi',
+                              color: Color(0x80FFFFFF),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['textOnPageLoadAnimation1']!),
+                        ),
                       ),
                       Align(
                         alignment: AlignmentDirectional(0, 0),
-                        child: Text(
-                          'Fighting against all odds I know we\'ll be\n\nalright this time Darling, just hold my \n\nhand Be my girl, I\'ll be your man\n\nI see my future in your eyes',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            fontFamily: 'Satoshi',
-                            color: Color(0x80FFFFFF),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                          ),
-                        ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation3']!),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(23, 0, 15, 0),
+                          child: Text(
+                            'We are still kids, but we\'re so in love. \n',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontFamily: 'Satoshi',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['textOnPageLoadAnimation2']!),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(23, 0, 15, 0),
+                          child: Text(
+                            'Fighting against all odds I know we\'ll be\n\nalright this time Darling, just hold my \n\nhand Be my girl, I\'ll be your man\n\nI see my future in your eyes',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontFamily: 'Satoshi',
+                              color: Color(0x80FFFFFF),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['textOnPageLoadAnimation3']!),
+                        ),
                       ),
                     ],
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(27, 0, 27, 0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(0, -1),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(2, 30, 2, 29),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            BackButtonWidget(),
-                            Text(
-                              widget.songName!,
-                              style: TextStyle(
-                                fontFamily: 'Satoshi',
-                                color: FlutterFlowTheme.of(context).dddddd,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18,
-                              ),
-                            ),
-                            SvgPicture.asset(
-                              'assets/images/vert.svg',
-                              width: 4,
-                              height: 18,
-                              fit: BoxFit.cover,
-                            ),
-                          ],
-                        ).animateOnPageLoad(
-                            animationsMap['rowOnPageLoadAnimation']!),
-                      ),
-                    ),
-                  ],
                 ),
               ),
               Align(

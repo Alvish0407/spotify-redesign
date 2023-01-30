@@ -87,18 +87,6 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         ),
       ],
     ),
-    'imageOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 300.ms,
-          begin: 0,
-          end: 1,
-        ),
-      ],
-    ),
     'columnOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -118,7 +106,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         ),
       ],
     ),
-    'imageOnPageLoadAnimation3': AnimationInfo(
+    'imageOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -232,7 +220,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         ),
       ],
     ),
-    'imageOnPageLoadAnimation4': AnimationInfo(
+    'imageOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -251,7 +239,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         ),
       ],
     ),
-    'imageOnPageLoadAnimation5': AnimationInfo(
+    'imageOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -282,7 +270,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         ),
       ],
     ),
-    'imageOnPageLoadAnimation6': AnimationInfo(
+    'imageOnPageLoadAnimation5': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -295,6 +283,25 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
         MoveEffect(
           curve: Curves.easeInOut,
           delay: 1100.ms,
+          duration: 300.ms,
+          begin: Offset(10, 0),
+          end: Offset(0, 0),
+        ),
+      ],
+    ),
+    'imageOnPageLoadAnimation6': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 1000.ms,
+          duration: 300.ms,
+          begin: 0,
+          end: 1,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 1000.ms,
           duration: 300.ms,
           begin: Offset(10, 0),
           end: Offset(0, 0),
@@ -302,25 +309,6 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
       ],
     ),
     'imageOnPageLoadAnimation7': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 1000.ms,
-          duration: 300.ms,
-          begin: 0,
-          end: 1,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 1000.ms,
-          duration: 300.ms,
-          begin: Offset(10, 0),
-          end: Offset(0, 0),
-        ),
-      ],
-    ),
-    'imageOnPageLoadAnimation8': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -430,12 +418,11 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                         child: Image.network(
                           widget.imageURL!,
                           width: double.infinity,
-                          height: 370,
+                          height: MediaQuery.of(context).size.height * 0.4,
                           fit: BoxFit.cover,
                         ),
                       ),
-                    ).animateOnPageLoad(
-                        animationsMap['imageOnPageLoadAnimation2']!),
+                    ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
@@ -474,7 +461,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                           height: 24,
                           fit: BoxFit.scaleDown,
                         ).animateOnPageLoad(
-                            animationsMap['imageOnPageLoadAnimation3']!),
+                            animationsMap['imageOnPageLoadAnimation2']!),
                       ],
                     ),
                   ),
@@ -567,7 +554,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                           height: 24,
                           fit: BoxFit.scaleDown,
                         ).animateOnPageLoad(
-                            animationsMap['imageOnPageLoadAnimation4']!),
+                            animationsMap['imageOnPageLoadAnimation3']!),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(29, 0, 0, 0),
                           child: SvgPicture.asset(
@@ -576,7 +563,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                             height: 26,
                             fit: BoxFit.scaleDown,
                           ).animateOnPageLoad(
-                              animationsMap['imageOnPageLoadAnimation5']!),
+                              animationsMap['imageOnPageLoadAnimation4']!),
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(17, 0, 17, 0),
@@ -608,7 +595,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                             height: 26,
                             fit: BoxFit.scaleDown,
                           ).animateOnPageLoad(
-                              animationsMap['imageOnPageLoadAnimation6']!),
+                              animationsMap['imageOnPageLoadAnimation5']!),
                         ),
                         SvgPicture.asset(
                           'assets/images/shuffle.svg',
@@ -616,7 +603,7 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                           height: 24,
                           fit: BoxFit.scaleDown,
                         ).animateOnPageLoad(
-                            animationsMap['imageOnPageLoadAnimation7']!),
+                            animationsMap['imageOnPageLoadAnimation6']!),
                       ],
                     ),
                   ),
@@ -626,8 +613,8 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                         context,
                         PageTransition(
                           type: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 400),
-                          reverseDuration: Duration(milliseconds: 400),
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
                           child: SongLyricsPageWidget(
                             imageURL: widget.imageURL,
                             songName: widget.songName,
@@ -643,15 +630,15 @@ class _SongDetailsPageWidgetState extends State<SongDetailsPageWidget>
                       fit: BoxFit.scaleDown,
                     ),
                   ).animateOnPageLoad(
-                      animationsMap['imageOnPageLoadAnimation8']!),
+                      animationsMap['imageOnPageLoadAnimation7']!),
                   InkWell(
                     onTap: () async {
                       await Navigator.push(
                         context,
                         PageTransition(
                           type: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 400),
-                          reverseDuration: Duration(milliseconds: 400),
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
                           child: SongLyricsPageWidget(
                             imageURL: widget.imageURL,
                             songName: widget.songName,
