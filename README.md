@@ -1,31 +1,10 @@
 # Spotify Redesign
 
-A new Flutter project.
+Introducing Spotify Redesign, a beautifully designed music app template built using Flutterflow and based on @[soroush norozy](https://www.linkedin.com/in/soroushnrz/)'s Spotify Redesign UI on Figma (https://lnkd.in/dHfQt66W). Completed in just 3 days, its responsive design and rich animations, Spotify Redesign offers a modern and engaging user experience.
 
-## Getting Started
+See the app in action at https://lnkd.in/dg4jquMd. You can also find the app on the Flutterflow Marketplace at https://lnkd.in/dpj8RGen, where you can discover other templates and tools to help you build your app.
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+LinkedIn Post:https://www.linkedin.com/feed/update/urn:li:activity:7026090040057311234/
 
-### IMPORTANT:
+https://user-images.githubusercontent.com/80829856/215711993-ded4984d-2f95-487f-a8d5-edec7446e01a.mp4
 
-For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
-
-```
-flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-
-This command creates the generated files that parse each Record from Firestore into a schema object.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
