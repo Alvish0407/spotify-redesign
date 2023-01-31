@@ -1,14 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_redesign/utils/extensions.dart';
+
 import '../components/back_button_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class FavouritePageWidget extends StatefulWidget {
   const FavouritePageWidget({Key? key}) : super(key: key);
@@ -251,7 +250,8 @@ class _FavouritePageWidgetState extends State<FavouritePageWidget>
                 child: Align(
                   alignment: AlignmentDirectional(0, 0),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(32, 30, 32, 20),
+                    padding: EdgeInsetsDirectional.fromSTEB(
+                        32, context.topPadding(10), 32, 20),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -547,7 +547,8 @@ class _FavouritePageWidgetState extends State<FavouritePageWidget>
                 ),
               ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(28, 0, 27, 85),
+              padding: EdgeInsetsDirectional.fromSTEB(
+                  28, 0, 27, 90 + context.bottomPadding()),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [

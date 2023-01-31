@@ -1,17 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_redesign/utils/extensions.dart';
+
 import '../components/album_details_tile_widget.dart';
 import '../components/song_details_tile_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../song_details_page/song_details_page_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
@@ -216,7 +215,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
               Align(
                 alignment: AlignmentDirectional(0, -1),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25, 30, 25, 24),
+                  padding: EdgeInsetsDirectional.fromSTEB(
+                      25, context.topPadding(), 25, 24),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -279,11 +279,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     alignment: AlignmentDirectional(-0.85, 0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 25, 0, 25),
+                                          10, 0, 0, 0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -992,7 +992,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           animationsMap['rowOnPageLoadAnimation3']!),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(28, 23, 20, 85),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          28, 23, 20, 85 + context.bottomPadding()),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [

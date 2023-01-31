@@ -1,15 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_redesign/utils/extensions.dart';
+
 import '../choose_mode_page/choose_mode_page_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class GetStartedPageWidget extends StatefulWidget {
   const GetStartedPageWidget({Key? key}) : super(key: key);
@@ -112,21 +111,19 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget>
                 alignment: AlignmentDirectional(0, 0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    SizedBox(height: context.topPadding(30)),
+                    SvgPicture.asset(
+                      'assets/images/spotify.svg',
+                      width: 196,
+                      height: 59,
+                      fit: BoxFit.scaleDown,
+                    ).animateOnPageLoad(
+                        animationsMap['imageOnPageLoadAnimation']!),
+                    Spacer(),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 37, 0, 0),
-                      child: SvgPicture.asset(
-                        'assets/images/spotify.svg',
-                        width: 196,
-                        height: 59,
-                        fit: BoxFit.scaleDown,
-                      ).animateOnPageLoad(
-                          animationsMap['imageOnPageLoadAnimation']!),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -197,6 +194,7 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget>
                             showLoadingIndicator: false,
                           ).animateOnPageLoad(
                               animationsMap['buttonOnPageLoadAnimation']!),
+                          SizedBox(height: context.bottomPadding()),
                         ],
                       ),
                     ),
