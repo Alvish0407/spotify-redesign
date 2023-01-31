@@ -551,7 +551,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Do You Have An Account ?',
+                      'Not A Member ?',
                       style: TextStyle(
                         fontFamily: 'Satoshi',
                         color: FlutterFlowTheme.of(context).dbdbdb,
@@ -572,7 +572,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget>
                         );
                       },
                       child: Text(
-                        ' Sign In',
+                        ' Register Now',
                         style: TextStyle(
                           color: FlutterFlowTheme.of(context).blueColor,
                           fontWeight: FontWeight.w500,
