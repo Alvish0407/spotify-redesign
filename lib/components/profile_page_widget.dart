@@ -1,15 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_redesign/utils/extensions.dart';
+
 import '../components/back_button_widget.dart';
 import '../components/playlist_details_tile_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class ProfilePageWidget extends StatefulWidget {
   const ProfilePageWidget({Key? key}) : super(key: key);
@@ -230,7 +229,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
             alignment: AlignmentDirectional(0, 0),
             child: Container(
               width: double.infinity,
-              height: 332.3,
+              height: 332.3 + context.topPadding(10),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).c2C2B2B,
                 borderRadius: BorderRadius.only(
@@ -254,7 +253,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                             alignment: AlignmentDirectional(0, 0),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  32, 30, 32, 20),
+                                  32, context.topPadding(10), 32, 20),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -441,7 +440,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 85),
+            padding: EdgeInsetsDirectional.fromSTEB(
+                0, 0, 0, 85 + context.bottomPadding()),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [

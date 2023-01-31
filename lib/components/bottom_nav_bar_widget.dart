@@ -1,14 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_redesign/utils/extensions.dart';
+
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
   const BottomNavBarWidget({Key? key}) : super(key: key);
@@ -69,7 +67,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
 
     return Container(
       width: double.infinity,
-      height: 73,
+      height: 73 + context.bottomPadding(0),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
@@ -150,8 +148,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
                     FFAppState().currentIndex = 1;
                   });
                 },
-                child: CachedNetworkImage(
-                  imageUrl: valueOrDefault<String>(
+                child: SvgPicture.network(
+                  valueOrDefault<String>(
                     FFAppState().currentIndex == 1
                         ? 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/uza6c3dmny5u/a_heart.svg'
                         : 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/tpp6coqll41m/heart.svg',
@@ -193,8 +191,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
                     FFAppState().currentIndex = 2;
                   });
                 },
-                child: CachedNetworkImage(
-                  imageUrl: valueOrDefault<String>(
+                child: SvgPicture.network(
+                  valueOrDefault<String>(
                     FFAppState().currentIndex == 2
                         ? 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/7mp533tq3g7o/a_profile.svg'
                         : 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/spotify-redesign-o39znf/assets/llzjpchvj8ve/profile.svg',
